@@ -13,34 +13,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dev.backendloja.entity.Estado;
-import com.dev.backendloja.service.EstadoService;
+import com.dev.backendloja.entity.Permissao;
+import com.dev.backendloja.service.PermissaoService;
 
 @RestController
-@RequestMapping("/api/estado")
-public class EstadoController {
-
+@RequestMapping("/api/permissao")
+public class PermisaoController {
+    
     @Autowired
-    private EstadoService estadoService;
+    private PermissaoService permissaoService;
 
     @GetMapping("/")
-    public List<Estado> buscarTodos(){
-        return estadoService.buscarTodos();
+    public List<Permissao> buscarTodos(){
+        return permissaoService.buscarTodos();
     }
 
     @PostMapping("/")
-    public Estado inserir(@RequestBody Estado estado){
-        return estadoService.inserir(estado);
+    public Permissao inserir(@RequestBody Permissao objeto){
+        return permissaoService.inserir(objeto);
     }
 
     @PutMapping("/")
-    public Estado alterar(@RequestBody Estado estado){
-        return estadoService.alterar(estado);
+    public Permissao alterar(@RequestBody Permissao objeto){
+        return permissaoService.alterar(objeto);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluir(@PathVariable("id") Long id){
-        estadoService.excluir(id);
+        permissaoService.excluir(id);
         return ResponseEntity.ok().build();
     }
     

@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dev.backendloja.entity.Cidade;
 import com.dev.backendloja.service.CidadeService;
 
+//Controle de cidade
+
 @RestController
 @RequestMapping("/api/cidade")
 public class CidadeController {

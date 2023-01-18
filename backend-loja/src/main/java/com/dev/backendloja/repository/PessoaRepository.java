@@ -6,4 +6,7 @@ import com.dev.backendloja.entity.Pessoa;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
     
+    //BUSCA VIA EMAIL
+    Pessoa findByEmail(String email);
+
 }

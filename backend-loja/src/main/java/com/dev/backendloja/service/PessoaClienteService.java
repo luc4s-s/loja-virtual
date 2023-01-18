@@ -28,7 +28,7 @@ public class PessoaClienteService {
         pessoa.setDataCriacao(new Date());
         Pessoa objetoNovo = pessoaRepository.saveAndFlush(pessoa);
         permissaoPessoaService.vincularPessoaPermissaoCliente(objetoNovo);
-        emailService.enviarEmailTexto(objetoNovo.getEmail(), "Cadastro na Loja", "O registro na loja foi realizada com sucesso. Em breve receberar uma a senha por E-mail!!");
+        emailService.enviarEmailTexto(objetoNovo.getEmail(), "Cadastro na Loja", "O registro na loja foi realizada com sucesso. Em breve receberar uma senha por E-mail!!");
         return objetoNovo;
     }
 }

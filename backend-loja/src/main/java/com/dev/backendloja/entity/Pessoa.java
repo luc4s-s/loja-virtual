@@ -43,6 +43,10 @@ public class Pessoa {
     private String endereco;
     private String cep;
 
+    private String codigoRecuperacaoSenha;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dataEnvioCodigo;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataCriacao;
 

@@ -14,6 +14,7 @@ public class PessoaClienteRequestDTO {
 
     private String nome;
     private String cpf;
+    private String email;
     private String endereco;
     private String cep;
     private Cidade cidade;
